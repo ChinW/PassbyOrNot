@@ -7,13 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B36A7ED7C7047663F2845808 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB7C913AD32E7CD5D855E7AC /* Pods.framework */; };
+		CB2FF5181CB9BA6900D09D26 /* PNNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2FF5171CB9BA6900D09D26 /* PNNavigationController.swift */; };
+		CB349F181CB8892E00847128 /* NATOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB349F141CB8892E00847128 /* NATOperation.swift */; };
+		CB349F191CB8892E00847128 /* NATMonitoringOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB349F151CB8892E00847128 /* NATMonitoringOperation.swift */; };
+		CB349F1A1CB8892E00847128 /* NATAdvertisingOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB349F161CB8892E00847128 /* NATAdvertisingOperation.swift */; };
+		CB349F1B1CB8892E00847128 /* NATRangingOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB349F171CB8892E00847128 /* NATRangingOperation.swift */; };
+		CB349F1D1CB88AC200847128 /* NATOperationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB349F1C1CB88AC200847128 /* NATOperationCell.swift */; };
+		CB349F1F1CB88AD300847128 /* NATViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB349F1E1CB88AD300847128 /* NATViewController.swift */; };
+		CB349F211CB88B0000847128 /* NATHiBeaconsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB349F201CB88B0000847128 /* NATHiBeaconsDelegate.swift */; };
+		CB349F2B1CB8C6E600847128 /* PasserbyPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB349F2A1CB8C6E600847128 /* PasserbyPopup.xib */; };
+		CB349F2D1CB8D0FA00847128 /* PasserbyPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB349F2C1CB8D0FA00847128 /* PasserbyPopupViewController.swift */; };
+		CB5FC93B1CB98CF500682D15 /* BeaconController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5FC93A1CB98CF500682D15 /* BeaconController.swift */; };
+		CB5FC9421CB99F3C00682D15 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5FC9411CB99F3C00682D15 /* MainTableViewController.swift */; };
+		CB5FC9451CB9A55200682D15 /* BeaconCellinMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5FC9441CB9A55200682D15 /* BeaconCellinMain.swift */; };
 		CBA5B3C61CB73B4F008D7C4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA5B3C51CB73B4F008D7C4B /* AppDelegate.swift */; };
-		CBA5B3C81CB73B4F008D7C4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA5B3C71CB73B4F008D7C4B /* ViewController.swift */; };
 		CBA5B3CB1CB73B4F008D7C4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBA5B3C91CB73B4F008D7C4B /* Main.storyboard */; };
-		CBA5B3CD1CB73B4F008D7C4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBA5B3CC1CB73B4F008D7C4B /* Assets.xcassets */; };
 		CBA5B3D01CB73B4F008D7C4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBA5B3CE1CB73B4F008D7C4B /* LaunchScreen.storyboard */; };
 		CBA5B3DB1CB73B4F008D7C4B /* PassbyOrNotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA5B3DA1CB73B4F008D7C4B /* PassbyOrNotTests.swift */; };
 		CBA5B3E61CB73B4F008D7C4B /* PassbyOrNotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA5B3E51CB73B4F008D7C4B /* PassbyOrNotUITests.swift */; };
+		CBDEB2C31CB9D45500ABD173 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDEB2C21CB9D45500ABD173 /* HistoryTableViewController.swift */; };
+		CBDEB2C61CB9D63200ABD173 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDEB2C51CB9D63200ABD173 /* HistoryTableViewCell.swift */; };
+		CBEFBA0F1CB94A77005F68D3 /* ConfigTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEFBA0E1CB94A77005F68D3 /* ConfigTableViewController.swift */; };
+		CBEFBA131CB97165005F68D3 /* MeetHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEFBA121CB97165005F68D3 /* MeetHistory.swift */; };
+		CBEFBA161CB9727F005F68D3 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEFBA151CB9727F005F68D3 /* UserInfo.swift */; };
+		CBEFBA181CB9746E005F68D3 /* DBFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEFBA171CB9746E005F68D3 /* DBFactory.swift */; };
+		CBFFDABB1CB97FC800131E2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBFFDABA1CB97FC800131E2D /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,11 +53,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		58EAC778970BEC7B96A115C7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		AB7C913AD32E7CD5D855E7AC /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB2FF5171CB9BA6900D09D26 /* PNNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PNNavigationController.swift; path = Controllers/PNNavigationController.swift; sourceTree = "<group>"; };
+		CB349F141CB8892E00847128 /* NATOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NATOperation.swift; sourceTree = "<group>"; };
+		CB349F151CB8892E00847128 /* NATMonitoringOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NATMonitoringOperation.swift; sourceTree = "<group>"; };
+		CB349F161CB8892E00847128 /* NATAdvertisingOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NATAdvertisingOperation.swift; sourceTree = "<group>"; };
+		CB349F171CB8892E00847128 /* NATRangingOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NATRangingOperation.swift; sourceTree = "<group>"; };
+		CB349F1C1CB88AC200847128 /* NATOperationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NATOperationCell.swift; sourceTree = "<group>"; };
+		CB349F1E1CB88AD300847128 /* NATViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NATViewController.swift; sourceTree = "<group>"; };
+		CB349F201CB88B0000847128 /* NATHiBeaconsDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NATHiBeaconsDelegate.swift; sourceTree = "<group>"; };
+		CB349F2A1CB8C6E600847128 /* PasserbyPopup.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PasserbyPopup.xib; path = Views/PasserbyPopup.xib; sourceTree = "<group>"; };
+		CB349F2C1CB8D0FA00847128 /* PasserbyPopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PasserbyPopupViewController.swift; path = Controllers/PasserbyPopupViewController.swift; sourceTree = "<group>"; };
+		CB5FC93A1CB98CF500682D15 /* BeaconController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BeaconController.swift; path = Controllers/BeaconController.swift; sourceTree = "<group>"; };
+		CB5FC9411CB99F3C00682D15 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTableViewController.swift; path = Controllers/MainTableViewController.swift; sourceTree = "<group>"; };
+		CB5FC9441CB9A55200682D15 /* BeaconCellinMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BeaconCellinMain.swift; path = Controllers/BeaconCellinMain.swift; sourceTree = "<group>"; };
 		CBA5B3C21CB73B4F008D7C4B /* PassbyOrNot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PassbyOrNot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBA5B3C51CB73B4F008D7C4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CBA5B3C71CB73B4F008D7C4B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CBA5B3CA1CB73B4F008D7C4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CBA5B3CC1CB73B4F008D7C4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CBA5B3CF1CB73B4F008D7C4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CBA5B3D11CB73B4F008D7C4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBA5B3D61CB73B4F008D7C4B /* PassbyOrNotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PassbyOrNotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +79,14 @@
 		CBA5B3E11CB73B4F008D7C4B /* PassbyOrNotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PassbyOrNotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBA5B3E51CB73B4F008D7C4B /* PassbyOrNotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassbyOrNotUITests.swift; sourceTree = "<group>"; };
 		CBA5B3E71CB73B4F008D7C4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBDEB2C21CB9D45500ABD173 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryTableViewController.swift; path = Controllers/HistoryTableViewController.swift; sourceTree = "<group>"; };
+		CBDEB2C51CB9D63200ABD173 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryTableViewCell.swift; path = Controllers/HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		CBEFBA0E1CB94A77005F68D3 /* ConfigTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConfigTableViewController.swift; path = Controllers/Config/ConfigTableViewController.swift; sourceTree = "<group>"; };
+		CBEFBA121CB97165005F68D3 /* MeetHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeetHistory.swift; path = PNData/MeetHistory.swift; sourceTree = "<group>"; };
+		CBEFBA151CB9727F005F68D3 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInfo.swift; path = PNData/UserInfo.swift; sourceTree = "<group>"; };
+		CBEFBA171CB9746E005F68D3 /* DBFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBFactory.swift; path = PNData/DBFactory.swift; sourceTree = "<group>"; };
+		CBFFDABA1CB97FC800131E2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F87A012C1CF6DB6C23D4A14B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B36A7ED7C7047663F2845808 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +115,69 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		566ED341EF32074CE829ADED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB7C913AD32E7CD5D855E7AC /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB349F131CB8891D00847128 /* NATOperation */ = {
+			isa = PBXGroup;
+			children = (
+				CB349F141CB8892E00847128 /* NATOperation.swift */,
+				CB349F151CB8892E00847128 /* NATMonitoringOperation.swift */,
+				CB349F161CB8892E00847128 /* NATAdvertisingOperation.swift */,
+				CB349F171CB8892E00847128 /* NATRangingOperation.swift */,
+			);
+			name = NATOperation;
+			sourceTree = "<group>";
+		};
+		CB349F221CB88B3D00847128 /* NATViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CB349F1E1CB88AD300847128 /* NATViewController.swift */,
+				CB349F201CB88B0000847128 /* NATHiBeaconsDelegate.swift */,
+				CB349F1C1CB88AC200847128 /* NATOperationCell.swift */,
+			);
+			name = NATViewController;
+			sourceTree = "<group>";
+		};
+		CB349F251CB8A7A000847128 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CB349F2A1CB8C6E600847128 /* PasserbyPopup.xib */,
+				CB349F2C1CB8D0FA00847128 /* PasserbyPopupViewController.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		CB5160981CB93270000CDAE2 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				CBEFBA0E1CB94A77005F68D3 /* ConfigTableViewController.swift */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		CB5FC93C1CB99DCD00682D15 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CB349F131CB8891D00847128 /* NATOperation */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		CB5FC9431CB9A53400682D15 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CB5FC9411CB99F3C00682D15 /* MainTableViewController.swift */,
+				CB5FC9441CB9A55200682D15 /* BeaconCellinMain.swift */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
 		CBA5B3B91CB73B4F008D7C4B = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +185,8 @@
 				CBA5B3D91CB73B4F008D7C4B /* PassbyOrNotTests */,
 				CBA5B3E41CB73B4F008D7C4B /* PassbyOrNotUITests */,
 				CBA5B3C31CB73B4F008D7C4B /* Products */,
+				D0AFE0CD82098B71718E7B26 /* Pods */,
+				566ED341EF32074CE829ADED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +203,14 @@
 		CBA5B3C41CB73B4F008D7C4B /* PassbyOrNot */ = {
 			isa = PBXGroup;
 			children = (
-				CBA5B3C51CB73B4F008D7C4B /* AppDelegate.swift */,
-				CBA5B3C71CB73B4F008D7C4B /* ViewController.swift */,
+				CBEFBA141CB971A0005F68D3 /* PNData */,
+				CB5FC93C1CB99DCD00682D15 /* Service */,
+				CB349F251CB8A7A000847128 /* Views */,
+				CBA5B3F81CB73C15008D7C4B /* Controllers */,
+				CBDEB2C41CB9D61100ABD173 /* History */,
+				CB2FF5171CB9BA6900D09D26 /* PNNavigationController.swift */,
 				CBA5B3C91CB73B4F008D7C4B /* Main.storyboard */,
-				CBA5B3CC1CB73B4F008D7C4B /* Assets.xcassets */,
-				CBA5B3CE1CB73B4F008D7C4B /* LaunchScreen.storyboard */,
-				CBA5B3D11CB73B4F008D7C4B /* Info.plist */,
+				CBA5B3F31CB73B73008D7C4B /* Support */,
 			);
 			path = PassbyOrNot;
 			sourceTree = "<group>";
@@ -125,6 +233,56 @@
 			path = PassbyOrNotUITests;
 			sourceTree = "<group>";
 		};
+		CBA5B3F31CB73B73008D7C4B /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				CBFFDABA1CB97FC800131E2D /* Assets.xcassets */,
+				CBA5B3C51CB73B4F008D7C4B /* AppDelegate.swift */,
+				CBA5B3CE1CB73B4F008D7C4B /* LaunchScreen.storyboard */,
+				CBA5B3D11CB73B4F008D7C4B /* Info.plist */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		CBA5B3F81CB73C15008D7C4B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CB5FC93A1CB98CF500682D15 /* BeaconController.swift */,
+				CB5160981CB93270000CDAE2 /* Config */,
+				CB349F221CB88B3D00847128 /* NATViewController */,
+				CB5FC9431CB9A53400682D15 /* Main */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		CBDEB2C41CB9D61100ABD173 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				CBDEB2C21CB9D45500ABD173 /* HistoryTableViewController.swift */,
+				CBDEB2C51CB9D63200ABD173 /* HistoryTableViewCell.swift */,
+			);
+			name = History;
+			sourceTree = "<group>";
+		};
+		CBEFBA141CB971A0005F68D3 /* PNData */ = {
+			isa = PBXGroup;
+			children = (
+				CBEFBA121CB97165005F68D3 /* MeetHistory.swift */,
+				CBEFBA151CB9727F005F68D3 /* UserInfo.swift */,
+				CBEFBA171CB9746E005F68D3 /* DBFactory.swift */,
+			);
+			name = PNData;
+			sourceTree = "<group>";
+		};
+		D0AFE0CD82098B71718E7B26 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F87A012C1CF6DB6C23D4A14B /* Pods.debug.xcconfig */,
+				58EAC778970BEC7B96A115C7 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +290,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CBA5B3EA1CB73B4F008D7C4B /* Build configuration list for PBXNativeTarget "PassbyOrNot" */;
 			buildPhases = (
+				1AAB6B9497418D3BCFD14C31 /* Check Pods Manifest.lock */,
 				CBA5B3BE1CB73B4F008D7C4B /* Sources */,
 				CBA5B3BF1CB73B4F008D7C4B /* Frameworks */,
 				CBA5B3C01CB73B4F008D7C4B /* Resources */,
+				E0630D8BEAFF07C7B17BA7F4 /* Embed Pods Frameworks */,
+				A7C79022594ED8B617D395FC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,6 +354,12 @@
 				TargetAttributes = {
 					CBA5B3C11CB73B4F008D7C4B = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = CUY8BD2Q45;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					CBA5B3D51CB73B4F008D7C4B = {
 						CreatedOnToolsVersion = 7.3;
@@ -230,8 +397,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBA5B3D01CB73B4F008D7C4B /* LaunchScreen.storyboard in Resources */,
-				CBA5B3CD1CB73B4F008D7C4B /* Assets.xcassets in Resources */,
 				CBA5B3CB1CB73B4F008D7C4B /* Main.storyboard in Resources */,
+				CBFFDABB1CB97FC800131E2D /* Assets.xcassets in Resources */,
+				CB349F2B1CB8C6E600847128 /* PasserbyPopup.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,13 +419,78 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1AAB6B9497418D3BCFD14C31 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A7C79022594ED8B617D395FC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0630D8BEAFF07C7B17BA7F4 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CBA5B3BE1CB73B4F008D7C4B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBA5B3C81CB73B4F008D7C4B /* ViewController.swift in Sources */,
+				CB349F1D1CB88AC200847128 /* NATOperationCell.swift in Sources */,
 				CBA5B3C61CB73B4F008D7C4B /* AppDelegate.swift in Sources */,
+				CB5FC93B1CB98CF500682D15 /* BeaconController.swift in Sources */,
+				CB5FC9421CB99F3C00682D15 /* MainTableViewController.swift in Sources */,
+				CBEFBA0F1CB94A77005F68D3 /* ConfigTableViewController.swift in Sources */,
+				CB2FF5181CB9BA6900D09D26 /* PNNavigationController.swift in Sources */,
+				CB349F191CB8892E00847128 /* NATMonitoringOperation.swift in Sources */,
+				CB349F1A1CB8892E00847128 /* NATAdvertisingOperation.swift in Sources */,
+				CB349F2D1CB8D0FA00847128 /* PasserbyPopupViewController.swift in Sources */,
+				CB5FC9451CB9A55200682D15 /* BeaconCellinMain.swift in Sources */,
+				CB349F1F1CB88AD300847128 /* NATViewController.swift in Sources */,
+				CBEFBA181CB9746E005F68D3 /* DBFactory.swift in Sources */,
+				CB349F181CB8892E00847128 /* NATOperation.swift in Sources */,
+				CBEFBA131CB97165005F68D3 /* MeetHistory.swift in Sources */,
+				CBDEB2C31CB9D45500ABD173 /* HistoryTableViewController.swift in Sources */,
+				CBDEB2C61CB9D63200ABD173 /* HistoryTableViewCell.swift in Sources */,
+				CB349F1B1CB8892E00847128 /* NATRangingOperation.swift in Sources */,
+				CB349F211CB88B0000847128 /* NATHiBeaconsDelegate.swift in Sources */,
+				CBEFBA161CB9727F005F68D3 /* UserInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,7 +582,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -389,7 +622,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -399,23 +632,31 @@
 		};
 		CBA5B3EB1CB73B4F008D7C4B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F87A012C1CF6DB6C23D4A14B /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PassbyOrNot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Chin.PassbyOrNot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		CBA5B3EC1CB73B4F008D7C4B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58EAC778970BEC7B96A115C7 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PassbyOrNot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Chin.PassbyOrNot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -484,6 +725,7 @@
 				CBA5B3EC1CB73B4F008D7C4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CBA5B3ED1CB73B4F008D7C4B /* Build configuration list for PBXNativeTarget "PassbyOrNotTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +734,7 @@
 				CBA5B3EF1CB73B4F008D7C4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CBA5B3F01CB73B4F008D7C4B /* Build configuration list for PBXNativeTarget "PassbyOrNotUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +743,7 @@
 				CBA5B3F21CB73B4F008D7C4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

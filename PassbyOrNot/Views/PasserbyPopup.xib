@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PasserbyPopupViewController" customModule="PassbyOrNot" customModuleProvider="target">
+            <connections>
+                <outlet property="checkButton" destination="kiW-gs-Ddf" id="ica-mO-vwJ"/>
+                <outlet property="userImage" destination="UaE-t6-9f8" id="grH-wK-Pay"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Sjo-g2-IQV"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="302" height="408"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UaE-t6-9f8">
+                    <rect key="frame" x="100" y="154" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="CcL-GT-sQ0"/>
+                        <constraint firstAttribute="width" secondItem="UaE-t6-9f8" secondAttribute="height" multiplier="1:1" id="Irc-T9-ZvA"/>
+                        <constraint firstAttribute="height" constant="296" id="ceE-sL-Njm"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="ceE-sL-Njm"/>
+                        </mask>
+                    </variation>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kiW-gs-Ddf">
+                    <rect key="frame" x="105.5" y="282" width="92" height="36"/>
+                    <color key="backgroundColor" red="1" green="0.45589639368501367" blue="0.38330304001325799" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="Username">
+                        <color key="titleColor" red="0.97407336445972181" green="1" blue="0.99595932763978057" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="kiW-gs-Ddf" firstAttribute="top" secondItem="UaE-t6-9f8" secondAttribute="bottom" constant="60" id="2km-78-rhe"/>
+                <constraint firstItem="UaE-t6-9f8" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="4Q4-j0-Wh2"/>
+                <constraint firstItem="UaE-t6-9f8" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="5sh-iY-M3x"/>
+                <constraint firstItem="UaE-t6-9f8" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="FcU-7C-rPi"/>
+                <constraint firstItem="UaE-t6-9f8" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="MXC-m9-OJr"/>
+                <constraint firstItem="UaE-t6-9f8" firstAttribute="centerX" secondItem="kiW-gs-Ddf" secondAttribute="centerX" id="NYP-vP-vGK"/>
+                <constraint firstItem="kiW-gs-Ddf" firstAttribute="top" secondItem="UaE-t6-9f8" secondAttribute="bottom" constant="50" id="Obv-Bq-HLy"/>
+                <constraint firstItem="kiW-gs-Ddf" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="PaV-IV-R9k"/>
+                <constraint firstItem="UaE-t6-9f8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="63" id="fWd-Jw-i1I"/>
+                <constraint firstAttribute="bottom" secondItem="kiW-gs-Ddf" secondAttribute="bottom" constant="90" id="gSV-lq-rxS"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="5sh-iY-M3x"/>
+                    <exclude reference="FcU-7C-rPi"/>
+                    <exclude reference="NYP-vP-vGK"/>
+                    <exclude reference="fWd-Jw-i1I"/>
+                    <exclude reference="2km-78-rhe"/>
+                    <exclude reference="Obv-Bq-HLy"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="152" y="288"/>
+        </view>
+    </objects>
+</document>
