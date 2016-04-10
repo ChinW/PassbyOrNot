@@ -11,8 +11,8 @@ import RealmSwift
 
 class MeetHistory: Object {
     
-    public dynamic var id: Int = 0
-    public dynamic var UUID = "" 
+//    public dynamic var id: Int = 0
+    public dynamic var UUID = ""
     public dynamic var major : Int = 0
     public dynamic var minor : Int = 0
     public dynamic var imagedata: NSData?
@@ -21,8 +21,8 @@ class MeetHistory: Object {
     public dynamic var meetDatetime = NSDate()
     public dynamic var create_at = NSDate()
     
-    override public static func primaryKey() -> String? {
-        return "id"
-    }
+//    override public static func primaryKey() -> String? {
+//        return "id"
+//    }
     
 }

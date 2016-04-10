@@ -16,7 +16,7 @@ class HistoryTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let realm = DBFactory.requestRealm()
-        records = realm?.objects(MeetHistory).sorted("id", ascending: false)
+        records = realm?.objects(MeetHistory).sorted("meetDatetime", ascending: false)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -44,10 +44,10 @@ class HistoryTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("HistoryCell") as! HistoryTableViewCell
         let beacon = self.records![indexPath.section]
-        cell.beaconImage.image = UIImage(named: "rsz_head7")
-        cell.beaconTitle.text = "\(beacon.major)\(beacon.minor)"
+        cell.beaconImage.image = UIImage(named: GLOBAL.PIC_PRE + "\(beacon.major % GLOBAL.LIST_SUM)")
+        cell.beaconTitle.text = GLOBAL.NAME_PRE + "#\(beacon.major) :\(beacon.minor)"
 //        print(indexPath.section)
-        cell.beaconDetail.text = "最后于\(beacon.meetDatetime.description)"
+        cell.beaconDetail.text = "最后于\(beacon.meetDatetime.descriptionWithLocale(NSLocale.currentLocale()))"
         return cell
 
     }

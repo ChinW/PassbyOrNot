@@ -14,6 +14,9 @@ struct GLOBAL {
     static var USER_INFO: UserInfo?
     static var BEACON : BeaconController?
     static var LIST_SUM = 13
+    static var PIC_PRE = "rsz_head"
+    static var NAME_PRE = "隔壁老王"
+    static var NOTIFICATION_DISTANCE = 1.0
 }
 
 public enum ModelType: Int {
@@ -33,7 +36,7 @@ public class DBFactory {
     static var _MODEL_MAX_ID_ = [Int:Int]()
     
     static var _CONFIG_ = Realm.Configuration(
-        schemaVersion: 4,
+        schemaVersion: 6,
         // 设置闭包，这个闭包将会在打开低于上面所设置版本号的 Realm 数据库的时候被自动调用
         migrationBlock: { migration, oldSchemaVersion in
             // 目前我们还未进行数据迁移，因此 oldSchemaVersion == 0

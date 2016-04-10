@@ -49,28 +49,32 @@ class BeaconController: NATMonitoringOperationDelegate, NATAdvertisingOperationD
     func filteredBeacons(beacons: [CLBeacon]) -> [CLBeacon] {
         var filteredBeacons = beacons   // Copy
         var lookup = Set<String>()
+//        var maxid = DBFactory.maxIdAndIncrementThen(ModelType.MeetHistory, Obj: MeetHistory.self) ?? 0
         let realm = DBFactory.requestRealm()
         realm?.beginWrite()
         for index in 0..<beacons.count {
             let currentBeacon = beacons[index]
             if currentBeacon.rssi == 0 && currentBeacon.accuracy == -1.0 {
-               filteredBeacons.removeAtIndex(index)
-//                var maxid = DBFactory.maxIdAndIncrementThen(ModelType.MeetHistory, Obj: MeetHistory.self) ?? 0
+                if(index < filteredBeacons.count){
+                    filteredBeacons.removeAtIndex(index)
+                }
+                //               filteredBeacons.removeAtIndex(index)
 //                maxid += 1
-//                let tmpImage = UIImagePNGRepresentation(UIImage(named: "headicon")!)!
-//                let major = Int(currentBeacon.major)
-//                let minor = Int(currentBeacon.minor)
-//                let username = "\(currentBeacon.major)\(currentBeacon.minor)"
-//                realm?.create(MeetHistory.self, value: [
+//                print("Max ID is\(maxid)")
+                let tmpImage = UIImagePNGRepresentation(UIImage(named: "headicon")!)!
+                let major = Int(currentBeacon.major)
+                let minor = Int(currentBeacon.minor)
+                let username = "\(currentBeacon.major)\(currentBeacon.minor)"
+                realm?.create(MeetHistory.self, value: [
 //                        "id": maxid,
-//                        "UUID": currentBeacon.proximityUUID.UUIDString,
-//                        "major": major,
-//                        "minor": minor,
-//                        "imagedata": tmpImage,
-//                        "username": username,
-//                        "count": 1,
-//                        "meetDatetime": NSDate()
-//                    ])
+                        "UUID": currentBeacon.proximityUUID.UUIDString,
+                        "major": major,
+                        "minor": minor,
+                        "imagedata": tmpImage,
+                        "username": username,
+                        "count": 1,
+                        "meetDatetime": NSDate()
+                    ])
                 continue
             }
             let identifier = "\(currentBeacon.major)/\(currentBeacon.minor)"
@@ -80,7 +84,7 @@ class BeaconController: NATMonitoringOperationDelegate, NATAdvertisingOperationD
                 //If it's a new comer
                 if !previousBeaconsIdentify.contains(identifier){
                     //and the distance is limit by 0.5 meter, push it
-                    if(currentBeacon.accuracy < 0.5){
+                    if(currentBeacon.accuracy < GLOBAL.NOTIFICATION_DISTANCE){
                         lookup.insert(identifier)
                         sendLocalNotificationForBeacon(currentBeacon)
                     }else{
@@ -91,6 +95,7 @@ class BeaconController: NATMonitoringOperationDelegate, NATAdvertisingOperationD
                 }
             }
         }
+//        DBFactory.setId(ModelType.MeetHistory, Id: maxid)
         try! realm?.commitWrite()
         previousBeaconsIdentify = lookup
         return filteredBeacons
@@ -173,13 +178,15 @@ class BeaconController: NATMonitoringOperationDelegate, NATAdvertisingOperationD
     
     func sendLocalNotificationForBeacon(beacon: CLBeacon) {
         let notification = UILocalNotification()
-        notification.alertBody = "Meet someone for UUID: \(beacon.major) \(beacon.minor)"
+        notification.alertBody = "Meet SomeOne using UUID: \(beacon.major) \(beacon.minor)"
         notification.alertAction = "View Details"
         notification.hasAction = true
         notification.soundName = UILocalNotificationDefaultSoundName
         UIApplication.sharedApplication().presentLocalNotificationNow(notification)
         
-        self.newPasserbyPopup("\(beacon.major) \(beacon.minor)", userImage: UIImage(named: "headicon")!)
+        let iconNumber = Int(beacon.major) % GLOBAL.LIST_SUM
+        
+        self.newPasserbyPopup("隔壁老王#\(beacon.major)", userImage: UIImage(named: "rsz_head\(iconNumber)")!)
     }
     
     /**
@@ -191,13 +198,24 @@ class BeaconController: NATMonitoringOperationDelegate, NATAdvertisingOperationD
      */
     func sendLocalNotificationForBeaconRegion(region: CLBeaconRegion) {
         let notification = UILocalNotification()
-        notification.alertBody = "Entered beacon region for UUID: " + region.proximityUUID.UUIDString
-        notification.alertAction = "View Details"
-        notification.hasAction = true
-        notification.soundName = UILocalNotificationDefaultSoundName
-        UIApplication.sharedApplication().presentLocalNotificationNow(notification)
-        
-        self.newPasserbyPopup(region.proximityUUID.UUIDString, userImage: UIImage(named: "headicon")!)
+        if let major = region.major{
+            notification.alertBody = "Meet SomeOne using UUID #\(major)"
+            notification.alertAction = "View Details"
+            notification.hasAction = true
+            notification.soundName = UILocalNotificationDefaultSoundName
+            UIApplication.sharedApplication().presentLocalNotificationNow(notification)
+            
+            let iconNumber = Int(major) % GLOBAL.LIST_SUM
+            
+            self.newPasserbyPopup("隔壁老王#\(major)", userImage: UIImage(named: "rsz_head\(iconNumber)")!)
+        }else{
+            notification.alertBody = "Meet SomeOne using UUID #\(region.proximityUUID.UUIDString) but NULL of major/minor"
+            notification.alertAction = "View Details"
+            notification.hasAction = true
+            notification.soundName = UILocalNotificationDefaultSoundName
+            UIApplication.sharedApplication().presentLocalNotificationNow(notification)
+            
+        }
     }
     
     func advertisingOperationDidStartSuccessfully() {

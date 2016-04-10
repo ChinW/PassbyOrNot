@@ -32,11 +32,11 @@ public class UserInfo: Object {
                 let minor = arc4random_uniform(5000)
                 let iconNumber = Int(major) % GLOBAL.LIST_SUM
                 
-                
                 let defaultImage = UIImagePNGRepresentation(UIImage(named: "rsz_head\(iconNumber)")!)!
                 
+                let maxid = DBFactory.maxIdAndIncrementThen(.UserInfo, Obj: UserInfo.self) ?? 0
                 realm?.create(UserInfo.self, value: [
-                    "id": 1,
+                    "id": maxid + 1,
                     "UUID": uuidString,
                     "major": Int(major),
                     "minor": Int(minor),
